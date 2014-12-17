@@ -1,1 +1,2 @@
 c:\users\flori_000\documents\visual studio 2013\Projects\MyLibrairie\MyLibrairie\bin\Debug\MyLibrairie.exe.config
+E:\Ingesup\Bachelor_3\Csharp\TP_BibliMania\MyLibrairie\bin\Debug\MyLibrairie.exe.config
