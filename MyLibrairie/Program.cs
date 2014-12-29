@@ -10,8 +10,8 @@ namespace MyLibrairie
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Salut");
-            Console.WriteLine("Nouvelle modification");
+            var bdd = new BDD();
+            bdd.addBook("Quatrevingt-treize", "Victor Hugo", 2, "9780848808204");
         }
     }
 }

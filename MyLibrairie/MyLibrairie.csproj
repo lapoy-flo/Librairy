@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BDD\BDD.cs" />
+    <Compile Include="Media\Book.cs" />
+    <Compile Include="Media\CD.cs" />
+    <Compile Include="Media\Media.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
