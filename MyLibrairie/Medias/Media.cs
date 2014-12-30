@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyLibrairie.Media
+namespace MyLibrairie.Medias
 {
-    class CD : Media
+    class Media
     {
 
     }
