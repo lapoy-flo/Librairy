@@ -42,14 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDD\BDD.cs" />
-    <Compile Include="Media\Book.cs" />
-    <Compile Include="Media\CD.cs" />
-    <Compile Include="Media\Media.cs" />
+    <Compile Include="Medias\Book.cs" />
+    <Compile Include="Medias\CD.cs" />
+    <Compile Include="Medias\Media.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
