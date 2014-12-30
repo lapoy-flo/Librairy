@@ -13,9 +13,9 @@ namespace MyLibrairie
         {
             var bdd = new BDD();
             bdd.albumList();
-            Console.WriteLine("--------------------------------------------------------------------");
+            Console.WriteLine("---------------------------------------------------------------------");
             bdd.bookList();
-
+            bdd.FindOneAlbum(2);
             Console.ReadLine();
         }
     }

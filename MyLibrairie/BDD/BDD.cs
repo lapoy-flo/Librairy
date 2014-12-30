@@ -57,7 +57,8 @@ namespace MyLibrairie.Views
 
             SqlCommand cmd = new SqlCommand(selectString, connection);
             var rdr = cmd.ExecuteReader();
-            
+
+            // Appel de la vue pour un album
             var view = new AlbumView();
             view.showAllAlbum(rdr);
 
@@ -72,42 +73,28 @@ namespace MyLibrairie.Views
 
             SqlCommand cmd = new SqlCommand(selectString, connection);
             var rdr = cmd.ExecuteReader();
-
-            int i = 1;
-            string available = "";
-            Console.WriteLine(String.Format("{0," + Console.WindowWidth / 2 + "}", "Tous les livres")); // Centrer le texte
-            Console.WriteLine();
-            while (rdr.Read())
-            {
-                // Appeler la vue pour un livre
-
-                if ((int)(byte)rdr["available"] == 1) // Cast (int)(byte) car tinyint dans la base
-                    available = "disponible";
-                else
-                    available = "emprunté";
-                Console.WriteLine("{0}. {1} - {2} ({3})     {4}", i, rdr["titre"], rdr["artist"], rdr["description"], available);
-                i++;
-            }
-            if (i == 1)
-                Console.WriteLine("Aucun livre trouvé...");
-            rdr.Close();
+            
+            // Appel de la vue pour un livre
+            var view = new BookView();
+            view.showAllBook(rdr);
 
             connection.Close();
         }
 
-        private void FindOneAlbum(int id_album, SqlConnection connection)
+        public void FindOneAlbum(int id_album)
         {
-            // Pas sûr que ça fonctionne !
-            // Voir avec connection.Open() dans la fonction albumList()
-            string selectString = @"SELECT * FROM music WHERE id_album = " + id_album;
+            string selectString = @"SELECT a.titre t, m.titre FROM music m, album a WHERE m.id_album = " + id_album + " AND m.id_album = a.id";
+            SqlConnection connection = new SqlConnection(ConnectionString);
+            connection.Open();
+
             SqlCommand cmd = new SqlCommand(selectString, connection);
             var rdr = cmd.ExecuteReader();
-            while (rdr.Read())
-            {
-                // Appeler la vue pour les musiques
 
-            }
-            Console.ReadLine();
+            // Appel de la vue pour les details d'un album
+            var view = new AlbumView();
+            view.showOneAlbum(rdr);
+
+            connection.Close();
         }
     }
 }

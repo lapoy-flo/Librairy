@@ -31,5 +31,20 @@ namespace MyLibrairie
                 Console.WriteLine("Aucun album trouvé...");
             rdr.Close();
         }
+
+        public void showOneAlbum(SqlDataReader rdr)
+        {
+            int i = 0;
+            while (rdr.Read())
+            {
+                if (i < 1)
+                {
+                    Console.WriteLine("Titre de l'album : {0}", rdr["t"]);
+                }
+                i++;
+                Console.WriteLine("     {0}. {1}", i, rdr["titre"]);
+            }
+            rdr.Close();
+        }
     }
 }
