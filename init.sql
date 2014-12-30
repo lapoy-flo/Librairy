@@ -1,4 +1,10 @@
-CREATE TABLE genre
+CREATE TABLE bookGenre
+(
+	[id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[description] VARCHAR(20) NOT NULL
+)
+
+CREATE TABLE musicGenre
 (
 	[id] INT NOT NULL PRIMARY KEY IDENTITY,
 	[description] VARCHAR(20) NOT NULL
@@ -14,7 +20,7 @@ CREATE TABLE book
 	[available] TINYINT NOT NULL,
 	CONSTRAINT fk_book_genre
 		FOREIGN KEY (id_genre)
-		REFERENCES genre(id)
+		REFERENCES bookGenre(id)
 )
 
 CREATE TABLE album
@@ -26,7 +32,7 @@ CREATE TABLE album
 	[available] TINYINT NOT NULL,
 	CONSTRAINT fk_music_genre
 		FOREIGN KEY (id_genre)
-		REFERENCES genre(id)
+		REFERENCES musicGenre(id)
 )
 
 CREATE TABLE music

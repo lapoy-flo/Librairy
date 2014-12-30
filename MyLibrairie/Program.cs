@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyLibrairie.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,11 @@ namespace MyLibrairie
         static void Main(string[] args)
         {
             var bdd = new BDD();
-            bdd.addBook("Quatrevingt-treize", "Victor Hugo", 2, "9780848808204");
+            bdd.albumList();
+            Console.WriteLine("--------------------------------------------------------------------");
+            bdd.bookList();
+
+            Console.ReadLine();
         }
     }
 }
