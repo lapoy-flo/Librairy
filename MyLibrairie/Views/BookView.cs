@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyLibrairie.Views
 {
-    class BookView
+    public class BookView
     {
         public void showAllBook(SqlDataReader rdr)
         {
@@ -26,6 +26,21 @@ namespace MyLibrairie.Views
             }
             if (i == 1)
                 Console.WriteLine("Aucun livre trouvé...");
+            rdr.Close();
+        }
+
+        public void showOneBook(SqlDataReader rdr)
+        {
+            int i = 0;
+            while (rdr.Read())
+            {
+                if (i < 1)
+                {
+                    Console.WriteLine("Titre du livre : {0}", rdr["t"]);
+                }
+                i++;
+                Console.WriteLine("     {0}. {1}", i, rdr["titre"]);
+            }
             rdr.Close();
         }
     }

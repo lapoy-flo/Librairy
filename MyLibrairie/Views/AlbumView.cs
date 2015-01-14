@@ -8,12 +8,13 @@ using MyLibrairie.Views;
 
 namespace MyLibrairie
 {
-    class AlbumView
+    public class AlbumView
     {
         public void showAllAlbum(SqlDataReader rdr)
         {
             int i = 1;
             string available = "";
+            Console.Clear();
             Console.WriteLine(String.Format("{0," + Console.WindowWidth / 2 + "}", "Tous les albums")); // Centrer le texte
             Console.WriteLine();
             while (rdr.Read())
@@ -34,6 +35,7 @@ namespace MyLibrairie
 
         public void showOneAlbum(SqlDataReader rdr)
         {
+            Console.Clear();
             int i = 0;
             while (rdr.Read())
             {

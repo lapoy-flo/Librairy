@@ -2,6 +2,6 @@ c:\users\flori_000\documents\visual studio 2013\Projects\MyLibrairie\MyLibrairie
 E:\Ingesup\Bachelor_3\Csharp\TP_BibliMania\MyLibrairie\bin\Debug\MyLibrairie.exe.config
 C:\Users\flori_000\Documents\Visual Studio 2013\Projects\MyLibrairie\MyLibrairie\bin\Debug\MyLibrairie.exe
 C:\Users\flori_000\Documents\Visual Studio 2013\Projects\MyLibrairie\MyLibrairie\bin\Debug\MyLibrairie.pdb
-C:\Users\flori_000\Documents\Visual Studio 2013\Projects\MyLibrairie\MyLibrairie\obj\Debug\MyLibrairie.csprojResolveAssemblyReference.cache
 C:\Users\flori_000\Documents\Visual Studio 2013\Projects\MyLibrairie\MyLibrairie\obj\Debug\MyLibrairie.exe
 C:\Users\flori_000\Documents\Visual Studio 2013\Projects\MyLibrairie\MyLibrairie\obj\Debug\MyLibrairie.pdb
+C:\Users\flori_000\documents\visual studio 2013\Projects\MyLibrairie\MyLibrairie\obj\Debug\MyLibrairie.csprojResolveAssemblyReference.cache
